@@ -9,6 +9,8 @@
  */
 public class NewJFrame extends javax.swing.JFrame {
 
+    private int saq;
+
     /**
      * Creates new form NewJFrame
      */
@@ -38,14 +40,14 @@ public class NewJFrame extends javax.swing.JFrame {
         lblNumConta = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         lblNome = new javax.swing.JLabel();
-        txtDep = new javax.swing.JTextField();
+        txtDepositar = new javax.swing.JTextField();
         btnDepepositar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        lblDepositoTotal = new javax.swing.JLabel();
+        lblDepositar = new javax.swing.JLabel();
         txtSacar = new javax.swing.JTextField();
         btnSacar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        lblSaqueTotal = new javax.swing.JLabel();
+        lblSacar = new javax.swing.JLabel();
         lblSaldo = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         btnFinalizar = new javax.swing.JButton();
@@ -63,11 +65,21 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel3.setText("Informe o número da conta:");
 
         txtNumConta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtNumConta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNumContaActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setText("Informe o nome do dono:");
 
         txtNome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeActionPerformed(evt);
+            }
+        });
 
         btnEntrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnEntrar.setText("Entrar na Conta");
@@ -94,7 +106,7 @@ public class NewJFrame extends javax.swing.JFrame {
         lblNome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblNome.setText("NOME");
 
-        txtDep.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtDepositar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         btnDepepositar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnDepepositar.setText("Depositar");
@@ -107,9 +119,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Depósito total:");
 
-        lblDepositoTotal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblDepositoTotal.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblDepositoTotal.setText("R$0,00");
+        lblDepositar.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        lblDepositar.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblDepositar.setText("R$0,00");
 
         txtSacar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
@@ -124,9 +136,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setText("Saque total:");
 
-        lblSaqueTotal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblSaqueTotal.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblSaqueTotal.setText("R$0,00");
+        lblSacar.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        lblSacar.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblSacar.setText("R$0,00");
 
         lblSaldo.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         lblSaldo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -171,7 +183,7 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGroup(pnlContaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlContaLayout.createSequentialGroup()
                                 .addGroup(pnlContaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtDep, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtDepositar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtSacar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, Short.MAX_VALUE)
                                 .addGroup(pnlContaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -182,11 +194,11 @@ public class NewJFrame extends javax.swing.JFrame {
                                     .addGroup(pnlContaLayout.createSequentialGroup()
                                         .addComponent(jLabel9)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lblSaqueTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(lblSacar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(pnlContaLayout.createSequentialGroup()
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lblDepositoTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(lblDepositar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(pnlContaLayout.createSequentialGroup()
                                 .addComponent(jLabel8)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -210,7 +222,7 @@ public class NewJFrame extends javax.swing.JFrame {
         );
         pnlContaLayout.setVerticalGroup(
             pnlContaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContaLayout.createSequentialGroup()
+            .addGroup(pnlContaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblDados)
                 .addGap(18, 18, 18)
@@ -228,14 +240,14 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGroup(pnlContaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlContaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(btnDepepositar)
-                                .addComponent(txtDep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtDepositar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel5)
-                                .addComponent(lblDepositoTotal)))
+                                .addComponent(lblDepositar)))
                         .addGap(18, 18, 18)
                         .addGroup(pnlContaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnSacar)
-                            .addComponent(lblSaqueTotal)
+                            .addComponent(lblSacar)
                             .addComponent(jLabel9))))
                 .addGap(27, 27, 27)
                 .addComponent(lblSaldo)
@@ -247,7 +259,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(pnlContaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnFechar)
                     .addComponent(jLabel2))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -269,10 +281,12 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(txtNumConta, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(84, 84, 84))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlConta, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnlConta, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -289,7 +303,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19)
                 .addComponent(btnEntrar)
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addComponent(pnlConta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -297,29 +311,57 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
-    int dep = Integer.parseInt(txtDep.getText());
-        lblDepositoTotal.setText(Integer.toString(dep));    
-        
-        
+    float dep = Float.parseFloat(txtDepositar.getText());
+        lblDepositar.setText(Integer.toString((int) dep));  
         
     }//GEN-LAST:event_btnFecharActionPerformed
 
     private void btnSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSacarActionPerformed
-        // TODO add your handling code here:
+    float saq = Float.parseFloat(txtSacar.getText());
+        lblSacar.setText("R$" + Integer.toString((int) saq));
+        
+        
     }//GEN-LAST:event_btnSacarActionPerformed
 
     private void btnDepepositarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepepositarActionPerformed
-        // TODO add your handling code here:
+        int dep = Integer.parseInt(txtDepositar.getText());
+        lblDepositar.setText("R$" + Integer.toString(dep));
+        
+        float saldo;
+        saldo = dep - saq;
+        lblSaldo.setText(Integer.toString((int) saldo));
+        
     }//GEN-LAST:event_btnDepepositarActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         pnlConta.setVisible(true);
+        
+        int num = Integer.parseInt(txtNumConta.getText());                     
+        lblNumConta.setText(Integer.toString(num));
+        
+        String nome = txtNome.getText();                     
+        lblNome.setText(nome);
+        
+        
+        
+        
+        
+        
         
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void btnFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnFinalizarActionPerformed
+
+    private void txtNumContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumContaActionPerformed
+        
+        
+    }//GEN-LAST:event_txtNumContaActionPerformed
+
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -377,13 +419,13 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lblDados;
-    private javax.swing.JLabel lblDepositoTotal;
+    private javax.swing.JLabel lblDepositar;
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblNumConta;
+    private javax.swing.JLabel lblSacar;
     private javax.swing.JLabel lblSaldo;
-    private javax.swing.JLabel lblSaqueTotal;
     private javax.swing.JPanel pnlConta;
-    private javax.swing.JTextField txtDep;
+    private javax.swing.JTextField txtDepositar;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtNumConta;
     private javax.swing.JTextField txtSacar;

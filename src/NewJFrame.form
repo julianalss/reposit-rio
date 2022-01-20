@@ -42,12 +42,14 @@
               </Group>
               <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="pnlConta" min="-2" pref="470" max="-2" attributes="0"/>
-                  <Component id="jLabel4" max="32767" attributes="0"/>
-              </Group>
+          <Group type="102" attributes="0">
+              <Component id="pnlConta" min="-2" pref="470" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel4" min="-2" pref="450" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -68,7 +70,7 @@
               </Group>
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Component id="btnEntrar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="pnlConta" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -101,6 +103,9 @@
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNumContaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
@@ -116,6 +121,9 @@
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnEntrar">
       <Properties>
@@ -146,7 +154,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtDep" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="txtDepositar" min="-2" pref="100" max="-2" attributes="0"/>
                                       <Component id="txtSacar" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="32767" attributes="0"/>
@@ -159,12 +167,12 @@
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lblSaqueTotal" max="32767" attributes="0"/>
+                                          <Component id="lblSacar" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lblDepositoTotal" min="-2" pref="95" max="-2" attributes="0"/>
+                                          <Component id="lblDepositar" min="-2" pref="95" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -203,7 +211,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblDados" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -219,21 +227,21 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="txtSacar" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="btnDepepositar" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtDep" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDepositar" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblDepositoTotal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblDepositar" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="btnSacar" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblSaqueTotal" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblSacar" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -250,7 +258,7 @@
                       <Component id="btnFechar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="23" max="32767" attributes="0"/>
+                  <EmptySpace pref="32" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -300,7 +308,7 @@
             <Property name="text" type="java.lang.String" value="NOME"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtDep">
+        <Component class="javax.swing.JTextField" name="txtDepositar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
@@ -326,10 +334,10 @@
             <Property name="text" type="java.lang.String" value="Dep&#xf3;sito total:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblDepositoTotal">
+        <Component class="javax.swing.JLabel" name="lblDepositar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Segoe UI" size="14" style="2"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="R$0,00"/>
@@ -361,10 +369,10 @@
             <Property name="text" type="java.lang.String" value="Saque total:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblSaqueTotal">
+        <Component class="javax.swing.JLabel" name="lblSacar">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="14" style="0"/>
+              <Font name="Segoe UI" size="14" style="2"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
             <Property name="text" type="java.lang.String" value="R$0,00"/>
